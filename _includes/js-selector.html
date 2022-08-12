@@ -75,7 +75,13 @@
       displayMath: [             /* start/end delimiter pairs for display math */
         ['$$', '$$'],
         ['\\[', '\\]']
-      ]
+      ],
+      /* added by Libo */
+      processEscapes: true,      // use \\$ to produce a literal dollar sign
+      tags: 'ams',               // automatic numbering 
+      useLabelIds: true,         // using label not tag for cross reference  
+      processEnvironments: true, // process \begin{xxx}...\end{xxx} outside math mode
+      processRefs: true          // process \ref{...} outside of math mode
     }
   };
   </script>
