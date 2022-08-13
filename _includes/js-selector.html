@@ -94,8 +94,10 @@
 
 <script src="{{ site.data.assets[origin].bootstrap.js | relative_url }}"></script>
 
-<script defer src="{{ site.data.assets[origin].cookieconsent.js | relative_url }}"></script>
-<script defer src="/assets/js/dist/cookieconsent-init.js"></script>
+{% if site.cookie_consent %}
+<script defer src="/assets/plugins/cookieconsent/cookieconsent.js"></script>
+<script defer src="/assets/plugins/cookieconsent/cookieconsent-init.js"></script>
+{% endif %}
 
 {% if jekyll.environment == 'production' %}
   <!-- PWA -->
