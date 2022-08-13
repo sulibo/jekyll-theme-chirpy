@@ -43,6 +43,7 @@
         }
 
         self.notify();
+        self.cc_mode_toggle();
 
       });
 
@@ -73,26 +74,25 @@
     setDark() {
       $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.DARK_MODE);
       sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.DARK_MODE);
-      if({{ site.cookie_consent }}){
-        document.body.classList.toggle('c_darkmode');
-        }
     }
 
     setLight() {
       $('html').attr(ModeToggle.MODE_ATTR, ModeToggle.LIGHT_MODE);
       sessionStorage.setItem(ModeToggle.MODE_KEY, ModeToggle.LIGHT_MODE);
-      if({{ site.cookie_consent }}){
-        document.body.classList.toggle('c_darkmode');
-        }
     }
 
     clearMode() {
       $('html').removeAttr(ModeToggle.MODE_ATTR);
       sessionStorage.removeItem(ModeToggle.MODE_KEY);
-      if({{ site.cookie_consent }}){
-        document.body.classList.toggle('c_darkmode');
-        }
     }
+
+    /* Toggle cookie_consent mode */
+    cc_mode_toggle() {
+        if({{ site.cookie_consent }}){
+        document.body.classList.toggle('c_darkmode');
+        };
+    }
+
 
     /* Notify another plugins that the theme mode has changed */
     notify() {
@@ -132,6 +132,8 @@
     }
 
     toggle.notify();
+    toggle.cc_mode_toggle();
+
 
   } /* flipMode() */
 
