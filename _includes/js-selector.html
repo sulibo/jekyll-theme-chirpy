@@ -94,6 +94,9 @@
 
 <script src="{{ site.data.assets[origin].bootstrap.js | relative_url }}"></script>
 
+<script defer src="{{ site.data.assets[origin].cookieconsent.js | relative_url }}"></script>
+<script defer src="/assets/js/dist/cookieconsent-init.js"></script>
+
 {% if jekyll.environment == 'production' %}
   <!-- PWA -->
   {% if site.pwa.enabled %}
