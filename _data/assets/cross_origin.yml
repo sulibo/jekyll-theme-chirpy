@@ -1,8 +1,7 @@
 # CDNs
 
 cdns:
-  # Google Fonts
-  - url: https://fonts.googleapis.com
+  # Google Fonts - url: https://fonts.googleapis.com
   - url: https://fonts.gstatic.com
     args: crossorigin
   - url: https://fonts.googleapis.com
@@ -64,4 +63,3 @@ mathjax:
 cookieconsent:
   css: https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.5/dist/cookieconsent.css
   js: https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v2.8.5/dist/cookieconsent.js
-
