@@ -43,7 +43,6 @@
         }
 
         self.notify();
-        self.cc_mode_toggle();
 
       });
 
@@ -86,14 +85,6 @@
       sessionStorage.removeItem(ModeToggle.MODE_KEY);
     }
 
-    /* Toggle cookie_consent mode */
-    cc_mode_toggle() {
-        if({{ site.cookie_consent }}){
-        document.body.classList.toggle('c_darkmode');
-        };
-    }
-
-
     /* Notify another plugins that the theme mode has changed */
     notify() {
       window.postMessage({
@@ -132,8 +123,6 @@
     }
 
     toggle.notify();
-    toggle.cc_mode_toggle();
-
 
   } /* flipMode() */
 
