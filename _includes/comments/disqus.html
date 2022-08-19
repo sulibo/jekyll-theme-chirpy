@@ -7,7 +7,7 @@
   </p>
 </div>
 
-<script type="text/javascript" data-cookiecategory="analytics">
+<script type="text/javascript">
 
   var disqus_config = function () {
     this.page.url = '{{ page.url | absolute_url }}';
@@ -22,8 +22,9 @@
             var d = document, s = d.createElement('script');
             s.src = 'https://{{ site.comments.disqus.shortname }}.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
-            s.type = "text/javascript";
-            s.setAttribute("data-cookiecategory", "analytics");
+            /* cookieconsent */
+            //s.setAttribute("type",  "text/plain");
+            //s.setAttribute("data-cookiecategory", "analytics");
             (d.head || d.body).appendChild(s);
         })();
 
