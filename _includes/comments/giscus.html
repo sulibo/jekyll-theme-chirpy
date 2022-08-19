@@ -1,5 +1,5 @@
 <!-- https://giscus.app/ -->
-<script type="text/javascript" data-cookiecategory="analytics">
+<script type="text/plain" data-cookiecategory="analytics">
   $(function () {
     const origin = "https://giscus.app";
     const iframe = "iframe.giscus-frame";
@@ -26,7 +26,7 @@
       "data-input-position": "{{ site.comments.giscus.input_position | default: 'bottom' }}",
       "data-lang": "{{ site.comments.giscus.lang | default: lang }}",
       "crossorigin": "anonymous",
-      "async": ""
+      "async": "",
     };
 
     let giscusScript = document.createElement("script");
