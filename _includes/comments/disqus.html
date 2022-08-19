@@ -22,6 +22,8 @@
             var d = document, s = d.createElement('script');
             s.src = 'https://{{ site.comments.disqus.shortname }}.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
+            s.type = "text/javascript";
+            s.setAttribute("data-cookiecategory", "analytics");
             (d.head || d.body).appendChild(s);
         })();
 
